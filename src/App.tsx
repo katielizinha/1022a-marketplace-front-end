@@ -12,7 +12,7 @@ function App() {
   const [produtos, setProdutos] = useState<ProdutoType []>([])
   //useEffects(O que fazer, quando Fazer) []=> Hora do carregamento da página
   useEffect(() => {
-    setNome("Guilherme Terenciani")
+    setNome("Katiély Fernanda Góis Santos")
     //Buscar os dados do BackENd
     fetch("https://one022a-marketplace-e90o.onrender.com/produtos")
       .then(resposta => resposta.json())
