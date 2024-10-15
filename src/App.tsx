@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     setNome("Katiély Fernanda Góis Santos")
     //Buscar os dados do BackENd
-    fetch("https://one022a-marketplace-e90o.onrender.com/produtos")
+    fetch("https://one022a-marketplace-czsd.onrender.com")
       .then(resposta => resposta.json())
       .then(dados => setProdutos(dados))
     //Colocar em uma variável
