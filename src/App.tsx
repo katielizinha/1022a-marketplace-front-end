@@ -9,17 +9,16 @@ type ProdutoType = {
 }
 function App() {
   const [nome, setNome] = useState("")
-  const [produtos, setProdutos] = useState<ProdutoType []>([])
+  const [produtos, setProdutos] = useState<ProdutoType[]>([])
   //useEffects(O que fazer, quando Fazer) []=> Hora do carregamento da página
   useEffect(() => {
     setNome("Katiély Fernanda Góis Santos")
     //Buscar os dados do BackENd
-    fetch("https://one022a-marketplace-czsd.onrender.com")
+    fetch("https://one022a-marketplace-czsd.onrender.com/produtos")
       .then(resposta => resposta.json())
       .then(dados => setProdutos(dados))
     //Colocar em uma variável
   }, [])
-
   return (
     <>
       <h1>{nome}</h1>
