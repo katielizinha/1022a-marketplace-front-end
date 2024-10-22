@@ -42,11 +42,27 @@
 }
 
 
+.usuarios-container{
+  display: flex;
+  gap: 20px;
+}
+.usuarios-item{
+ width: 300px;
+ border: 1px solid #f0f0f0;
+ padding: 15px 20px;
+ box-sizing: border-box;
+ box-shadow: 0px 0px 12px 2px rgb(141, 134, 134);
+}
+.container-imagem{
+  width: 100%;
+  overflow: hidden;
+}
+
 .produtos-container{
   display: flex;
   gap: 20px;
 }
-.produto-item{
+.usuarios-item{
  width: 300px;
  border: 1px solid #f0f0f0;
  padding: 15px 20px;
@@ -60,3 +76,5 @@
 .produto-item>.container-imagem>img{
   width: 100%;
 }
+
+

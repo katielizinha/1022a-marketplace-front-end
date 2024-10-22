@@ -24,18 +24,21 @@ function App() {
   const [produtos, setProdutos] = useState<ProdutoType[]>([])
   const [usuarios, setUsuarios] = useState<UsuarioType[]>([])
   //useEffects(O que fazer, quando Fazer) []=> Hora do carregamento da página
+
   useEffect(() => {
-    setNome("Katiély Fernanda Góis Santos")
     //Buscar os dados do BackENd
     fetch("https://one022a-marketplace-czsd.onrender.com/produtos")
-    fetch("https://one022a-marketplace-czsd.onrender.com/usuarios")
       .then(resposta => resposta.json())
       .then(dados => setProdutos(dados))
-      .then(dados => setUsuarios(dados))
-
-
-    //Colocar em uma variável
   }, [])
+
+  useEffect(() => {
+    //Buscar os dados do BackENd
+    fetch("https://one022a-marketplace-czsd.onrender.com/usuarios")
+      .then(resposta => resposta.json())
+      .then(dados => setUsuarios(dados))
+  }, [])
+
   return (
     <>
       <h1>{nome}</h1>
