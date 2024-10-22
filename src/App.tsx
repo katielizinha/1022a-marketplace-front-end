@@ -20,7 +20,7 @@ type UsuarioType = {
 
 
 function App() {
-  const [nome, setNome] = useState("")
+
   const [produtos, setProdutos] = useState<ProdutoType[]>([])
   const [usuarios, setUsuarios] = useState<UsuarioType[]>([])
   //useEffects(O que fazer, quando Fazer) []=> Hora do carregamento da página
@@ -41,8 +41,12 @@ function App() {
 
   return (
     <>
-      <h1>{nome}</h1>
-      <div className="produtos-container">
+      
+      <div className = "itens-container">
+        <div className="Produtos">
+        <h1>Produtos</h1>
+         <div className="produtos-container">
+          
         {
           produtos.map(produto => {
             return (
@@ -58,21 +62,26 @@ function App() {
           })
         }
       </div>
+      </div>
+      <div className="Usuarios">
+      <h1>Usuários</h1>
       <div className="usuarios-container">
         {
           usuarios.map(usuario => {
            return(
             <div key={usuario.id} className='usuario-item'>
                  <h1>{usuario.nome}</h1>
-                 <p>{usuario.email}</p>
-                 <p>{usuario.created_at}</p>
-                 <p>{usuario.updated_at}</p>
+                 <p><strong>Email:</strong> {usuario.email}</p>
+              <p><strong>Data de Criação:</strong> {new Date(usuario.created_at).toLocaleString()}</p>
+              <p><strong>Última Atualização:</strong> {new Date(usuario.updated_at).toLocaleString()}</p>
             </div>
            )
           })
         }
 
       </div>
+      </div>
+      </div>   
     </>
   )
 }
