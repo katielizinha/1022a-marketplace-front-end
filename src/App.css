@@ -63,8 +63,7 @@
 .usuarios-container{
   display: flex;
   gap: 20px;
-  display: flex;
-  flex-direction: column;
+  
 }
 
 .usuario-item{
@@ -75,19 +74,5 @@
   box-shadow: 0px 0px 12px 2px rgb(195, 195, 195);
 }
 
-.itens-container{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  
-}
 
-.Produtos{
-  margin: 15px;
-  
-}
 
-.Usuarios{
-  margin: 15px;
- 
-}
